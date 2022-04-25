@@ -1,0 +1,16 @@
+C:\Users\jramosseijo\source\repos\WinFormsRouter\WinFormsRouter\bin\Debug\net5.0-windows\WinFormsRouter.deps.json
+C:\Users\jramosseijo\source\repos\WinFormsRouter\WinFormsRouter\bin\Debug\net5.0-windows\WinFormsRouter.dll
+C:\Users\jramosseijo\source\repos\WinFormsRouter\WinFormsRouter\bin\Debug\net5.0-windows\ref\WinFormsRouter.dll
+C:\Users\jramosseijo\source\repos\WinFormsRouter\WinFormsRouter\bin\Debug\net5.0-windows\WinFormsRouter.pdb
+C:\Users\jramosseijo\source\repos\WinFormsRouter\WinFormsRouter\obj\Debug\net5.0-windows\WinFormsRouter.csproj.AssemblyReference.cache
+C:\Users\jramosseijo\source\repos\WinFormsRouter\WinFormsRouter\obj\Debug\net5.0-windows\WinFormsRouter.AppContainer.resources
+C:\Users\jramosseijo\source\repos\WinFormsRouter\WinFormsRouter\obj\Debug\net5.0-windows\WinFormsRouter.csproj.GenerateResource.cache
+C:\Users\jramosseijo\source\repos\WinFormsRouter\WinFormsRouter\obj\Debug\net5.0-windows\WinFormsRouter.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jramosseijo\source\repos\WinFormsRouter\WinFormsRouter\obj\Debug\net5.0-windows\WinFormsRouter.AssemblyInfoInputs.cache
+C:\Users\jramosseijo\source\repos\WinFormsRouter\WinFormsRouter\obj\Debug\net5.0-windows\WinFormsRouter.AssemblyInfo.cs
+C:\Users\jramosseijo\source\repos\WinFormsRouter\WinFormsRouter\obj\Debug\net5.0-windows\WinFormsRouter.csproj.CoreCompileInputs.cache
+C:\Users\jramosseijo\source\repos\WinFormsRouter\WinFormsRouter\obj\Debug\net5.0-windows\WinFormsRouter.dll
+C:\Users\jramosseijo\source\repos\WinFormsRouter\WinFormsRouter\obj\Debug\net5.0-windows\ref\WinFormsRouter.dll
+C:\Users\jramosseijo\source\repos\WinFormsRouter\WinFormsRouter\obj\Debug\net5.0-windows\WinFormsRouter.pdb
+C:\Users\jramosseijo\source\repos\WinFormsRouter\WinFormsRouter\obj\Debug\net5.0-windows\WinFormsRouter.ModalContainer.resources
+C:\Users\jramosseijo\source\repos\WinFormsRouter\WinFormsRouter\obj\Debug\net5.0-windows\WinFormsRouter.ErrorApplicationContainer._404.resources
