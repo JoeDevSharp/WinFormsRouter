@@ -68,7 +68,7 @@ namespace WinFormsRouteExemple
         private void loginToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             var _params = new Params();
-            _params.Add("user", "j.ramos@jm-ramos.com");
+            _params.Add("user", "test@exemple.com");
             _params.Add("pass", "ajdoajfewfm");
             AppContainer.Open("login", _params);
         }
@@ -86,7 +86,7 @@ namespace WinFormsRouteExemple
         private void loginToolStripMenuItem2_Click(object sender, EventArgs e)
         {
             var _params = new Params();
-            _params.Add("user", "j.ramos@jm-ramos.com");
+            _params.Add("user", "test@exemple.com");
             _params.Add("pass", "ajdoajfewfm");
             AppContainer.OpenModal("login", _params);
         }
@@ -94,7 +94,7 @@ namespace WinFormsRouteExemple
         private void ApplicationBase_Load(object sender, EventArgs e)
         {
             var _params = new Params();
-            _params.Add("user", "j.ramos@jm-ramos.com");
+            _params.Add("user", "test@exemple.com");
             _params.Add("pass", "ajdoajfewfm");
 
             AppContainer.Navigate("login", _params);
