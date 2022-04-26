@@ -38,11 +38,10 @@ namespace WinFormsRouteExemple
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.pictureBox1.Location = new System.Drawing.Point(362, 126);
+            this.pictureBox1.Location = new System.Drawing.Point(354, 137);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(91, 91);
+            this.pictureBox1.Size = new System.Drawing.Size(91, 80);
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 

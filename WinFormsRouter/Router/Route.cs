@@ -12,5 +12,7 @@ namespace WinFormsRouter.Router
     {
         public string Name { get; set; }
         public Form Component { get; set; }
+        public string? RedirectTo { get; set; } = null;
+        public ValueType? AccesLevel { get; set; } = null;
     }
 }

@@ -13,6 +13,9 @@ namespace WinFormsRouter.Router
         protected Form Parant { get; set; }
         protected Form Component { get; set; }
         public List<Route> History = new List<Route>();
+        protected ValueType ActualAccesLevel { get; set; }
+
+        protected bool WithControls { get; set; }
         protected Route getRouteByName(string name, Route[] routes = null)
         {
             var route = routes.SingleOrDefault(r => {
@@ -26,6 +29,29 @@ namespace WinFormsRouter.Router
                 : user404
                 : route;
         }
-        
+        protected Route AccessLevelVerification(Route route, Route[] routes)
+        {
+            var _custom403 = routes.SingleOrDefault(r => r.Name == "403");
+            var _default403 = new Route { Name = "403", Component = new ErrorApplicationContainer._403() };
+
+            if (route.AccesLevel == null)
+                return route;
+
+            return (int)ActualAccesLevel <= (int)route.AccesLevel == false 
+                ? _custom403 == null 
+                ? _default403 
+                : _custom403 
+                : route;
+        }
+
+        protected bool IsRouteError (Route route)
+        {
+            List<string> errors = new List<string>();
+            errors.AddRange(new string[] {
+                "404",
+                "403"
+            });
+            return errors.Contains(route.Name);
+        }
     }
 }

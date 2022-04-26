@@ -4,6 +4,9 @@
     <Compile Update="AppContainer.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="ErrorApplicationContainer\403.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="ErrorApplicationContainer\404.cs">
       <SubType>Form</SubType>
     </Compile>

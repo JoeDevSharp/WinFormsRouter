@@ -18,46 +18,53 @@ namespace WinFormsRouter
         /// </summary>
         /// <param name="routes"></param>
         /// <param name="parant"></param>
-        /// <param name="container"></param>
-        /// <param name="withControls"></param>
-        public AppContainer(Route[] routes, Form parant, Control container = null, bool withControls = false)
+        /// <param name="componentContainer"></param>
+        /// <param name="inWindow"></param>
+        public AppContainer(ValueType actualAccesLevel, Route[] routes, Form parant, Control componentContainer = null, bool inWindow = false)
         {
             InitializeComponent();
             
             Parant = parant;
             Routes = routes;
+            ActualAccesLevel = actualAccesLevel;
+            WithControls = inWindow;
 
             this.TopLevel = false;
             this.Dock = DockStyle.Fill;
-            this.FormBorderStyle = !withControls ? FormBorderStyle.None : FormBorderStyle.Sizable;
+            this.FormBorderStyle = FormBorderStyle.None;
 
-            if (container == null)
+            if (componentContainer == null)
             {
                 Parant.Controls.Add(this);
             }else
             {
-                container.Controls.Add(this);
+                componentContainer.Controls.Add(this);
             } 
             this.Show();
         }
-        
+
         /// <summary>
         /// Navigate to new route
         /// </summary>
         /// <param name="name"></param>
-        public void Navigate(string name, Params _params = null)
+        public bool Navigate(string name, Params _params = null)
         {
             var route = getRouteByName(name, Routes);
-            
-            if(route != (History.Count > 0 ? History.Last() : null))
+            route = this.AccessLevelVerification(route, Routes);
+
+            if (route != (History.Count > 0 ? History.Last() : null))
             {
                 Component = route.Component;
                 Component.TopLevel = false;
-                Component.FormBorderStyle = FormBorderStyle.None;
-                Component.Size = Parant.Size;
-                Component.Dock = DockStyle.Fill;
+                Component.FormBorderStyle = WithControls == true ? FormBorderStyle.Sizable : FormBorderStyle.None;
+                Component.Dock = WithControls == true ? DockStyle.None : DockStyle.Fill;
 
-                this.Controls.Clear();
+                if(!WithControls)
+                {
+                    Component.Size = Parant.Size;
+                    this.Controls.Clear();
+                }
+                
                 this.Controls.Add((Form)Component);
                 
                 try
@@ -66,33 +73,48 @@ namespace WinFormsRouter
                 } catch (Exception) { }
 
                 Component.Show();
-                History.Add(route);
-                ((RouterFormContainer)this.Parant).HitoryChange(route);
+
+                if (!IsRouteError(route))
+                {
+                    History.Add(route);
+                    ((RouterFormContainer)this.Parant).HitoryChange(route);
+                }
+                    
+                return true;
             }
+            return false;
         }
 
         /// <summary>
         /// Shows in a new window a new instance of the component of the current route
         /// </summary>
         /// <param name="name"></param>
-        public void Open(string name)
+        public void Open(string name, Params _params = null)
         {
             var route = getRouteByName(name, Routes);
+            route = this.AccessLevelVerification(route, Routes);
             var _component = route.Component.GetType();
             Form instance = (Form)Activator.CreateInstance(_component);
             instance.Show();
+            if (!IsRouteError(route))
+            {
+                History.Add(route);
+                ((RouterFormContainer)this.Parant).HitoryChange(route);
+            }
         }
 
         /// <summary>
         /// Shows in a modal dialog a new instance of the component of the current route
         /// </summary>
         /// <param name="name"></param>
-        public void OpenModal(string name)
+        public void OpenModal(string name, Params _params = null)
         {
             var route = getRouteByName(name, Routes);
+            route = this.AccessLevelVerification(route, Routes);
             var _component = route.Component.GetType();
             Form instance = (Form)Activator.CreateInstance(_component);
             instance.ShowDialog();
+            
         }
 
     }

@@ -15,3 +15,4 @@ C:\Users\jramosseijo\source\repos\WinFormsRouter\WinFormsRouter\obj\Debug\net5.0
 C:\Users\jramosseijo\source\repos\WinFormsRouter\WinFormsRouter\obj\Debug\net5.0-windows\WinFormsRouter.ModalContainer.resources
 C:\Users\jramosseijo\source\repos\WinFormsRouter\WinFormsRouter\obj\Debug\net5.0-windows\WinFormsRouter.ErrorApplicationContainer._404.resources
 C:\Users\jramosseijo\source\repos\WinFormsRouter\WinFormsRouter\obj\Debug\net5.0-windows\WinFormsRouter.Router.RouterFormContainer.resources
+C:\Users\jramosseijo\source\repos\WinFormsRouter\WinFormsRouter\obj\Debug\net5.0-windows\WinFormsRouter.ErrorApplicationContainer._403.resources

@@ -17,7 +17,11 @@ namespace WinFormsRouteExemple
         public ApplicationBase()
         {
             InitializeComponent();
-            AppContainer = new AppContainer(Routes.routes, this, __BaseContainer);
+            AppContainer = new AppContainer(
+                    Routes.AccesLevel.User, 
+                    Routes.routes, this,
+                    __BaseContainer
+                );
         }
 
         public override void HitoryChange (Route to)
@@ -63,7 +67,10 @@ namespace WinFormsRouteExemple
 
         private void loginToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            AppContainer.Open("login");
+            var _params = new Params();
+            _params.Add("user", "j.ramos@jm-ramos.com");
+            _params.Add("pass", "ajdoajfewfm");
+            AppContainer.Open("login", _params);
         }
 
         private void adminToolStripMenuItem2_Click(object sender, EventArgs e)
@@ -78,7 +85,10 @@ namespace WinFormsRouteExemple
 
         private void loginToolStripMenuItem2_Click(object sender, EventArgs e)
         {
-            AppContainer.OpenModal("login");
+            var _params = new Params();
+            _params.Add("user", "j.ramos@jm-ramos.com");
+            _params.Add("pass", "ajdoajfewfm");
+            AppContainer.OpenModal("login", _params);
         }
 
         private void ApplicationBase_Load(object sender, EventArgs e)
@@ -86,6 +96,7 @@ namespace WinFormsRouteExemple
             var _params = new Params();
             _params.Add("user", "j.ramos@jm-ramos.com");
             _params.Add("pass", "ajdoajfewfm");
+
             AppContainer.Navigate("login", _params);
         }
     }
