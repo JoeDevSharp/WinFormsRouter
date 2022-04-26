@@ -7,11 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\WinFormsRouter\WinFormsRouter.csproj" />
+    <Folder Include="ErrorViews\" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="ErrorViews\" />
+    <Reference Include="WinFormsRouter">
+      <HintPath>..\WinFormsRouter\bin\Release\net5.0-windows\WinFormsRouter.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>

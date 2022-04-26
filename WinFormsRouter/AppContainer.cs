@@ -95,12 +95,15 @@ namespace WinFormsRouter
             route = this.AccessLevelVerification(route, Routes);
             var _component = route.Component.GetType();
             Form instance = (Form)Activator.CreateInstance(_component);
-            instance.Show();
-            if (!IsRouteError(route))
+
+            try
             {
-                History.Add(route);
-                ((RouterFormContainer)this.Parant).HitoryChange(route);
+                ((IRouterForm)instance).Params = _params;
             }
+            catch (Exception) { }
+
+            instance.Show();
+            
         }
 
         /// <summary>
@@ -113,6 +116,13 @@ namespace WinFormsRouter
             route = this.AccessLevelVerification(route, Routes);
             var _component = route.Component.GetType();
             Form instance = (Form)Activator.CreateInstance(_component);
+
+            try
+            {
+                ((IRouterForm)instance).Params = _params;
+            }
+            catch (Exception) { }
+
             instance.ShowDialog();
             
         }

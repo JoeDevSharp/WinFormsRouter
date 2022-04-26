@@ -8,15 +8,18 @@
     ".NETCoreApp,Version=v5.0": {
       "WinFormsRouteExemple/1.0.0": {
         "dependencies": {
-          "WinFormsRouter": "1.0.0"
+          "WinFormsRouter": "1.0.0.0"
         },
         "runtime": {
           "WinFormsRouteExemple.dll": {}
         }
       },
-      "WinFormsRouter/1.0.0": {
+      "WinFormsRouter/1.0.0.0": {
         "runtime": {
-          "WinFormsRouter.dll": {}
+          "WinFormsRouter.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }
@@ -27,8 +30,8 @@
       "serviceable": false,
       "sha512": ""
     },
-    "WinFormsRouter/1.0.0": {
-      "type": "project",
+    "WinFormsRouter/1.0.0.0": {
+      "type": "reference",
       "serviceable": false,
       "sha512": ""
     }

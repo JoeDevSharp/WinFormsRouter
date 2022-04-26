@@ -9,9 +9,6 @@ C:\Users\jramosseijo\source\repos\WinFormsRouter\WinFormsRouteExemple\bin\Releas
 C:\Users\jramosseijo\source\repos\WinFormsRouter\WinFormsRouteExemple\bin\Release\net5.0-windows\WinFormsRouter.pdb
 C:\Users\jramosseijo\source\repos\WinFormsRouter\WinFormsRouteExemple\obj\Release\net5.0-windows\WinFormsRouteExemple.csproj.AssemblyReference.cache
 C:\Users\jramosseijo\source\repos\WinFormsRouter\WinFormsRouteExemple\obj\Release\net5.0-windows\WinFormsRouteExemple.Admin.AdminUsers.resources
-C:\Users\jramosseijo\source\repos\WinFormsRouter\WinFormsRouteExemple\obj\Release\net5.0-windows\WinFormsRouteExemple.Form1.resources
-C:\Users\jramosseijo\source\repos\WinFormsRouter\WinFormsRouteExemple\obj\Release\net5.0-windows\WinFormsRouteExemple.Form2.resources
-C:\Users\jramosseijo\source\repos\WinFormsRouter\WinFormsRouteExemple\obj\Release\net5.0-windows\WinFormsRouteExemple.Form3.resources
 C:\Users\jramosseijo\source\repos\WinFormsRouter\WinFormsRouteExemple\obj\Release\net5.0-windows\WinFormsRouteExemple.Login.resources
 C:\Users\jramosseijo\source\repos\WinFormsRouter\WinFormsRouteExemple\obj\Release\net5.0-windows\WinFormsRouteExemple.csproj.GenerateResource.cache
 C:\Users\jramosseijo\source\repos\WinFormsRouter\WinFormsRouteExemple\obj\Release\net5.0-windows\WinFormsRouteExemple.GeneratedMSBuildEditorConfig.editorconfig
@@ -23,3 +20,6 @@ C:\Users\jramosseijo\source\repos\WinFormsRouter\WinFormsRouteExemple\obj\Releas
 C:\Users\jramosseijo\source\repos\WinFormsRouter\WinFormsRouteExemple\obj\Release\net5.0-windows\ref\WinFormsRouteExemple.dll
 C:\Users\jramosseijo\source\repos\WinFormsRouter\WinFormsRouteExemple\obj\Release\net5.0-windows\WinFormsRouteExemple.pdb
 C:\Users\jramosseijo\source\repos\WinFormsRouter\WinFormsRouteExemple\obj\Release\net5.0-windows\WinFormsRouteExemple.genruntimeconfig.cache
+C:\Users\jramosseijo\source\repos\WinFormsRouter\WinFormsRouteExemple\obj\Release\net5.0-windows\WinFormsRouteExemple.Admin.AdminPanel.resources
+C:\Users\jramosseijo\source\repos\WinFormsRouter\WinFormsRouteExemple\obj\Release\net5.0-windows\WinFormsRouteExemple.ApplicationBase.resources
+C:\Users\jramosseijo\source\repos\WinFormsRouter\WinFormsRouteExemple\obj\Release\net5.0-windows\WinFormsRouteExemple.Management.resources

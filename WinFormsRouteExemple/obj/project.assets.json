@@ -1,33 +1,11 @@
 {
   "version": 3,
   "targets": {
-    "net5.0-windows7.0": {
-      "WinFormsRouter/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v5.0",
-        "compile": {
-          "bin/placeholder/WinFormsRouter.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/WinFormsRouter.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.WindowsDesktop.App.WindowsForms"
-        ]
-      }
-    }
+    "net5.0-windows7.0": {}
   },
-  "libraries": {
-    "WinFormsRouter/1.0.0": {
-      "type": "project",
-      "path": "../WinFormsRouter/WinFormsRouter.csproj",
-      "msbuildProject": "../WinFormsRouter/WinFormsRouter.csproj"
-    }
-  },
+  "libraries": {},
   "projectFileDependencyGroups": {
-    "net5.0-windows7.0": [
-      "WinFormsRouter >= 1.0.0"
-    ]
+    "net5.0-windows7.0": []
   },
   "packageFolders": {
     "C:\\Users\\jramosseijo\\.nuget\\packages\\": {}
@@ -55,11 +33,7 @@
       "frameworks": {
         "net5.0-windows7.0": {
           "targetAlias": "net5.0-windows",
-          "projectReferences": {
-            "C:\\Users\\jramosseijo\\source\\repos\\WinFormsRouter\\WinFormsRouter\\WinFormsRouter.csproj": {
-              "projectPath": "C:\\Users\\jramosseijo\\source\\repos\\WinFormsRouter\\WinFormsRouter\\WinFormsRouter.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {
