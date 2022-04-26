@@ -15,23 +15,23 @@ namespace WinFormsRouteExemple
             {
                 Component = new Login(),
                 Name = "login",
-                DefaultRoute = true,
             },
             new Route()
             {
-                Component = new Form2(),
+                Component = new Admin.AdminPanel(),
                 Name = "admin",
             },
             new Route()
             {
-                Component = new Form3(),
+                Component = new Management(),
                 Name = "management",
             },
-            new Route()
-            {
-                Component = new WinFormsRouter.ErrorApplicationContainer._404(),
-                Name = "404",
-            },
+            // Error 404 
+            //new Route()
+            //{
+            //    Component = new WinFormsRouter.ErrorApplicationContainer._404(),
+            //    Name = "404", // The name 404 is reserved for correct management of errors in router
+            //},
         };
     }
 }

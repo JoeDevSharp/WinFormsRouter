@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WinFormsRouteExemple
 {
-    public partial class Form2 : Form
+    public partial class Management : Form
     {
-        public Form2()
+        public Management()
         {
             InitializeComponent();
         }

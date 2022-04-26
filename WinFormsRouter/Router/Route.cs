@@ -12,7 +12,5 @@ namespace WinFormsRouter.Router
     {
         public string Name { get; set; }
         public Form Component { get; set; }
-        public bool? DefaultRoute { get; set; } = false;
-        
     }
 }

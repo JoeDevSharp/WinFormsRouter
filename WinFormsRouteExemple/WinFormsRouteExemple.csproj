@@ -10,4 +10,8 @@
     <ProjectReference Include="..\WinFormsRouter\WinFormsRouter.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="ErrorViews\" />
+  </ItemGroup>
+
 </Project>

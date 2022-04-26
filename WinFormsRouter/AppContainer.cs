@@ -11,64 +11,45 @@ using WinFormsRouter.Router;
 
 namespace WinFormsRouter
 {
-    public partial class AppContainer : Form
+    public partial class AppContainer : RouterContainer
     {
-        private Route[] Routes { get; set; }
-        private Form Parant { get; set; }
-        private Form Component { get; set; }
-
         /// <summary>
         /// 
         /// </summary>
         /// <param name="routes"></param>
         /// <param name="parant"></param>
+        /// <param name="container"></param>
         /// <param name="withControls"></param>
-        public AppContainer(Route[] routes, Form parant, bool withControls = false)
+        public AppContainer(Route[] routes, Form parant, Control container = null, bool withControls = false)
         {
             InitializeComponent();
             
             Parant = parant;
             Routes = routes;
-            
+
             this.TopLevel = false;
             this.Dock = DockStyle.Fill;
             this.FormBorderStyle = !withControls ? FormBorderStyle.None : FormBorderStyle.Sizable;
 
-            // Router default route
-            var dr = routes.SingleOrDefault(r => r.DefaultRoute == true);
-            if (dr != null)
-                Navigate(dr.Name);
-
-            Parant.Controls.Add(this);
+            if (container == null)
+            {
+                Parant.Controls.Add(this);
+            }else
+            {
+                container.Controls.Add(this);
+            } 
             this.Show();
-        }
-
-        internal Route getRouteByName (string name, Route[] routes = null)
-        {
-            var route = routes.SingleOrDefault(r => {
-                return r.Name == name;
-            });
-
-            var user404 = routes.SingleOrDefault(r => r.Name == "404");
-            return route == null 
-                ? user404 == null 
-                ? new Route { Name = "404", Component = new ErrorApplicationContainer._404() }
-                : user404 
-                : route;
         }
         
         /// <summary>
         /// Navigate to new route
         /// </summary>
         /// <param name="name"></param>
-        public void Navigate(string name)
+        public void Navigate(string name, Params _params = null)
         {
             var route = getRouteByName(name, Routes);
             
-            if(route == null)
-            {
-                MessageBox.Show("This route does not exist", "Router Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }else
+            if(route != (History.Count > 0 ? History.Last() : null))
             {
                 Component = route.Component;
                 Component.TopLevel = false;
@@ -78,7 +59,15 @@ namespace WinFormsRouter
 
                 this.Controls.Clear();
                 this.Controls.Add((Form)Component);
+                
+                try
+                {
+                    ((IRouterForm)Component).Params = _params;
+                } catch (Exception) { }
+
                 Component.Show();
+                History.Add(route);
+                ((RouterFormContainer)this.Parant).HitoryChange(route);
             }
         }
 

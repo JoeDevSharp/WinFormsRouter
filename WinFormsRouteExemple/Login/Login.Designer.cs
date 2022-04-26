@@ -31,8 +31,8 @@ namespace WinFormsRouteExemple
         {
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.@__Password = new System.Windows.Forms.TextBox();
+            this.@__Users = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,21 +56,21 @@ namespace WinFormsRouteExemple
             this.button1.Text = "Login";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // textBox2
+            // __Password
             // 
-            this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox2.Location = new System.Drawing.Point(284, 273);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(232, 23);
-            this.textBox2.TabIndex = 5;
+            this.@__Password.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.@__Password.Location = new System.Drawing.Point(284, 273);
+            this.@__Password.Name = "__Password";
+            this.@__Password.Size = new System.Drawing.Size(232, 23);
+            this.@__Password.TabIndex = 5;
             // 
-            // textBox1
+            // __Users
             // 
-            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox1.Location = new System.Drawing.Point(284, 235);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(232, 23);
-            this.textBox1.TabIndex = 4;
+            this.@__Users.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.@__Users.Location = new System.Drawing.Point(284, 235);
+            this.@__Users.Name = "__Users";
+            this.@__Users.Size = new System.Drawing.Size(232, 23);
+            this.@__Users.TabIndex = 4;
             // 
             // Login
             // 
@@ -80,10 +80,11 @@ namespace WinFormsRouteExemple
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.@__Password);
+            this.Controls.Add(this.@__Users);
             this.Name = "Login";
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.Login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -94,7 +95,7 @@ namespace WinFormsRouteExemple
 
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox __Password;
+        private System.Windows.Forms.TextBox __Users;
     }
 }
