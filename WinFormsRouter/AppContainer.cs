@@ -27,7 +27,7 @@ namespace WinFormsRouter
             Parant = parant;
             Routes = routes;
             ActualAccesLevel = actualAccesLevel;
-            WithControls = inWindow;
+            InWindow = inWindow;
 
             this.TopLevel = false;
             this.Dock = DockStyle.Fill;
@@ -52,27 +52,33 @@ namespace WinFormsRouter
             var route = getRouteByName(name, Routes);
             route = this.AccessLevelVerification(route, Routes);
 
-            if (route != (History.Count > 0 ? History.Last() : null))
+            if (InWindow == true ? true : route != (History.Count > 0 ? History.Last() : null))
             {
                 Component = route.Component;
                 Component.TopLevel = false;
-                Component.FormBorderStyle = WithControls == true ? FormBorderStyle.Sizable : FormBorderStyle.None;
-                Component.Dock = WithControls == true ? DockStyle.None : DockStyle.Fill;
-
-                if(!WithControls)
-                {
-                    Component.Size = Parant.Size;
-                    this.Controls.Clear();
-                }
-                
-                this.Controls.Add((Form)Component);
+                Component.FormBorderStyle = InWindow == true ? FormBorderStyle.Sizable : FormBorderStyle.None;
+                Component.Dock = InWindow == true ? DockStyle.None : DockStyle.Fill;
                 
                 try
                 {
                     ((IRouterForm)Component).Params = _params;
                 } catch (Exception) { }
-
-                Component.Show();
+                
+                if(!InWindow)
+                {
+                    Component.Size = Parant.Size;
+                    Controls.Clear();
+                    Controls.Add(Component);
+                    Component.Show();
+                }
+                else
+                {
+                    var _component = Component.GetType();
+                    Form instance = (Form)Activator.CreateInstance(_component);
+                    instance.TopLevel = false;
+                    Controls.Add(instance);
+                    instance.Show();
+                }
 
                 if (!IsRouteError(route))
                 {

@@ -15,7 +15,7 @@ namespace WinFormsRouter.Router
         public List<Route> History = new List<Route>();
         protected ValueType ActualAccesLevel { get; set; }
 
-        protected bool WithControls { get; set; }
+        protected bool InWindow { get; set; }
         protected Route getRouteByName(string name, Route[] routes = null)
         {
             var route = routes.SingleOrDefault(r => {
